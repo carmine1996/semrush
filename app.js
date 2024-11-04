@@ -28,3 +28,11 @@ menu_principale_links.forEach( function( menu_principale_link ){
 
     
 })
+
+let lista_nazioni_visibile_btn = document.querySelector('.lista-nazioni-visibile')
+
+lista_nazioni_visibile_btn.addEventListener('click', function(e){
+    lista = document.querySelector('.lista-nazioni-visibile div:not(.active)')
+
+    this.append('<div class="lista-options">'+lista+'</div>');
+});
