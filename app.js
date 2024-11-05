@@ -60,6 +60,7 @@ lista_opts_nazioni.forEach( function(opt){
         lista_nazioni_visibile_btn.innerHTML = '';
         lista_nazioni_visibile_btn.append(clone)
 
+        document.querySelector('[name="nazione"]').value = this.getAttribute('data-val')
     })
 } )
 
