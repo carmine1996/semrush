@@ -18,6 +18,7 @@
      <link rel="icon" href="img/favicon.f8cd638f087a.ico">
 </head>
 <body>
+        <input type="hidden" value="mario">
     <header id="main-header">
         <div class="container">
             <div class="col-header-1">
@@ -88,10 +89,15 @@
                     <form action="/" id="search-sezione-1">
                         <div class="search-select">
                             <input type="search" placeholder="Inserisci la tua keyword o parola chiave..." name="search-phrase">
-                            <select name="lista-nazioni">
-                                <option value="it">Italia</option>
-                                <option value="eng">USA</option>
-                            </select>
+                            <input type="hidden" name="nazione" value="">
+                            <div class="lista-nazioni-visibile">
+                                
+                                <div class="lista-opt-selected"><div data-val="it" class="active">Italia <img src="img/GIF-Bandiera-Italiana-1.webp" alt=""></div></div>
+                                <div class="lista-opts">
+                                    <div data-val="it" class="active">Italia <img src="img/GIF-Bandiera-Italiana-1.webp" alt=""></div>
+                                    <div data-val="eng">USA <img src="img/storia-della-bandiera-inglese.jpeg" alt=""></div>
+                                </div>
+                            </div>
                         </div>
                         <button>Inizia ora</button>
                     </form>
