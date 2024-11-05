@@ -9,6 +9,7 @@
 }
 
 body{
+    background-color: red;
     margin: 0px;
     font-size: 16px;
     font-family: var(--font-family-primario);
@@ -589,3 +590,54 @@ section#sezione-6 li::before {
     min-width: 260px;
 }
 
+.lista-nazioni-visibile {
+    max-width: 100px;
+}
+
+.lista-nazioni-visibile div img {
+    width: 30px;
+}
+
+.lista-opt-selected {
+    background: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+.lista-nazioni-visibile .lista-opts {
+    background: #fff;
+    height: 100%;
+    display: none;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+/* .lista-nazioni-visibile div:not(.active){
+    display: none;
+} */
+
+
+.lista-opts.show-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-opt-selected div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-opt-selected div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-opts.show-list div {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
