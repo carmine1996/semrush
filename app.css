@@ -597,7 +597,7 @@ section#sezione-6 li::before {
     width: 30px;
 }
 
-.lista-nazioni-visibile div {
+.lista-opt-selected {
     background: #fff;
     height: 100%;
     display: flex;
@@ -605,6 +605,38 @@ section#sezione-6 li::before {
     padding-inline: 10px;
 }
 
-.lista-nazioni-visibile div:not(.active){
+.lista-nazioni-visibile .lista-opts {
+    background: #fff;
+    height: 100%;
     display: none;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+/* .lista-nazioni-visibile div:not(.active){
+    display: none;
+} */
+
+
+.lista-opts.show-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-opt-selected div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-opt-selected div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-opts.show-list div {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #f1f1f1;
 }
