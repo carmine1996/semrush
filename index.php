@@ -2,6 +2,7 @@
 
 use Inc\Model\User;
 use Inc\Controller\UserController;
+use Inc\Controller\RecensioniController;
 
 /* $token = bin2hex(openssl_random_pseudo_bytes(64));
 var_dump($token); */
@@ -20,6 +21,7 @@ spl_autoload_register(function( $class ){
 });
 
 $user = new User;
+$recensioni = new RecensioniController;
 
 /* Qui gestisco tramite il GET in php le interfaccie da mostrare */
 

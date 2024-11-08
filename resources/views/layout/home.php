@@ -210,9 +210,42 @@
                             <div class="lista-reviews">
                                 <?php 
                                 
-                                $recensioni = new RecensioniController;
-                                $recensioni->createRecensione();
-                                var_dump($recensioni->index());
+                                $lista_recensioni = $recensioni->index();
+                                $conteggio = count($lista_recensioni);
+
+                                echo <<<EOD
+                                    <div class="top-list-reviews">
+                                        <span class="go-back-reviews"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                        <span class="counter-reviews">                                         
+                                            <span>1</span> / $conteggio
+                                        </span>
+                                        <span class="go-forward-reviews"><i class="fa-solid fa-arrow-right-long"></i></span>
+                                    </div>
+                                EOD;
+
+                                $i = 0;
+
+                                foreach ($lista_recensioni as $recensione) {
+                                    $descrizione = $recensione['descrizione'];
+                                    $nome = $recensione['nome'];
+                                    $cognome = $recensione['cognome'];
+                                    
+                                    $active = ( $i == 0 ? 'active' : '' );
+
+                                    echo <<<EOD
+                                        <div class="recensione $active">
+                                            <blockquote>
+                                                <div>
+                                                    <q> $descrizione </q>
+                                                </div>
+                                                <div>
+                                                    <i> $nome $cognome </i>
+                                                </div>
+                                            </blockquote>
+                                        </div>
+                                    EOD;
+                                    $i++;
+                                }
 
                                 ?>
                             </div>
@@ -227,4 +260,3 @@
             </div>
         </section>
 <?php require __DIR__.'/../components/footer.php'; ?>
-use Inc\Controller\RecensioniController;

@@ -680,6 +680,10 @@ img.hearth {
     list-style: none;
 }
 
+.tab-list-reviews--body .lista-reviews .recensione:not(.active){
+    display: none;
+}
+
 @keyframes pulse{
     50%{
         transform:scale(0.6)
@@ -706,3 +710,28 @@ img.hearth {
 .tab-list-reviews--body > div:not(.active){
     display: none;
 }
+
+.top-list-reviews{
+    text-align: center;
+    font-size: 30px;
+}
+
+.top-list-reviews .counter-reviews{
+    margin-inline: 15px;
+}
+
+.lista-reviews .recensione {
+    text-align: center;
+}
+
+.lista-reviews .recensione q {
+    font-size: 50px;
+    line-height: normal;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.go-back-reviews, .go-forward-reviews{
+    cursor: pointer;
+}
+

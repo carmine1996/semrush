@@ -7,10 +7,10 @@ use Inc\Model\Recensioni;
 class RecensioniController{
     public static function index(){
         $users = new Recensioni();
-        return $users->allUsers();
+        return $users->allReviews();
     }
 
-    public function creaRecensione(){
+    public function createRecensione(){
         $utente = new Recensioni;
 
         $params = array(

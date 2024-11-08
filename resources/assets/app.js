@@ -74,6 +74,11 @@ document.querySelectorAll('.tab-list-reviews').forEach(function( tablist ){
     
             let target = this.getAttribute('data-href')
             let colorBg = this.getAttribute('data-color')
+
+            tablist.querySelectorAll('.tab-list-reviews--head a').forEach( (a) => a.classList.remove('active') )
+            tablist.querySelectorAll('.tab-list-reviews--head a').forEach( (a) => a.style.background = 'white' )
+            this.classList.add('active')
+            this.style.background = colorBg
     
             console.log(target);
     
@@ -83,4 +88,40 @@ document.querySelectorAll('.tab-list-reviews').forEach(function( tablist ){
             target_to_trigger.classList.add('active')
         });
     })
+});
+
+let counterReviews = 1;
+
+document.querySelector('.go-forward-reviews').addEventListener('click', function(e){
+    let listaReviews = document.querySelector('.lista-reviews')
+    let recensioni = document.querySelectorAll('.recensione')
+    let countMaxReviews = recensioni.length;
+
+    if( counterReviews < countMaxReviews ){
+        counterReviews++;
+    }
+
+    document.querySelector('.counter-reviews span').innerHTML = counterReviews
+    
+    document.querySelectorAll('.recensione').forEach( (item) => item.classList.remove('active') )
+    console.log(listaReviews[counterReviews]);
+    recensioni[counterReviews - 1 ].classList.add('active')
+
+});
+
+
+document.querySelector('.go-back-reviews').addEventListener('click', function(e){
+    let listaReviews = document.querySelector('.lista-reviews')
+    let recensioni = document.querySelectorAll('.recensione')
+
+    if( counterReviews > 1 ){
+        counterReviews--;
+    }
+
+    document.querySelector('.counter-reviews span').innerHTML = counterReviews
+    
+    document.querySelectorAll('.recensione').forEach( (item) => item.classList.remove('active') )
+    console.log(listaReviews[counterReviews]);
+    recensioni[counterReviews - 1 ].classList.add('active')
+
 });
