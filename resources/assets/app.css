@@ -11,7 +11,6 @@
 }
 
 body{
-    background-color: red;
     margin: 0px;
     font-size: 16px;
     font-family: var(--font-family-primario);
@@ -535,13 +534,21 @@ section#sezione-6 li, section#sezione-6 p {
 
 section#sezione-6 li {
     margin-bottom: 20px;
+    padding-left: 30px;
     list-style: none;
     position: relative;
 }
 
+section#sezione-6 ul {
+    padding-left: 0px;
+}
+
+
 section#sezione-6 li::before {
     content: '';
     background-image: url("img/check.c740a961354242250074.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     width: 20px;
     height: 20px;
     position: absolute;
@@ -642,4 +649,42 @@ section#sezione-6 li::before {
     display: flex;
     gap: 10px;
     border-bottom: 1px solid #f1f1f1;
+}
+
+img.hearth {
+    animation: pulse 2s linear infinite alternate;
+}
+
+#sezione-7{
+    margin-top: 100px
+}
+
+#sezione-7 h3{
+    text-align: center;
+}
+
+.tab-list-reviews--head a {
+    padding: 15px 30px;
+    background: #fff;
+    border: 1px solid #5b5b5b;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.tab-list-reviews--head ul {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(0.6)
+    }
+    100%{
+        transform:scale(1.2)
+    }
 }
