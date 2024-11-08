@@ -86,7 +86,6 @@
                         </div>
                         <div class="back-3d">
                             <img src="<?php echo MEDIA_PATH; ?>seo.94e1f354aed0.svg" alt="">
-                            <img class="back" src="<?php echo MEDIA_PATH; ?>seo.94e1f354aed0.svg" alt="">
                         </div>    
                     </div>
                     <div id="web" class="grid-col-2">
@@ -191,25 +190,41 @@
         </section>
 
         <section id="sezione-7">
-            <h3>Ecco perché i marketer <img class="hearth" src="<?php echo MEDIA_PATH; ?>accent-heart.50c80235f2fffcbc5ad9.svg"> Semrush</h3>
+            <div class="container">
+                <h3>Ecco perché i marketer <img class="hearth" src="<?php echo MEDIA_PATH; ?>accent-heart.50c80235f2fffcbc5ad9.svg"> Semrush</h3>
 
-            <div class="tab-list-reviews">
-                <div class="tab-list-reviews--head">
-                    <ul>
-                        <li><a data-href="suite">Suite di marketing</a></li>
-                        <li><a data-href="#seo">Seo</a></li>
-                        <li><a data-href="#seo">Seo</a></li>
-                        <li><a data-href="#seo">Seo</a></li>
-                        <li><a data-href="#seo">Seo</a></li>
-                        <li><a data-href="#seo">Seo</a></li>
-                        <li><a data-href="#seo">Seo</a></li>
-                    </ul>
-                </div>
-                <div class="tab-list-reviews--body">
-                    <div data-target="suite">
-                        <div class="lista-reviews"></div>
+                <div class="tab-list-reviews">
+                    <div class="tab-list-reviews--head">
+                        <ul>
+                            <li><a data-href="suite" data-color="pink" class="active">Suite di marketing</a></li>
+                            <li><a data-href="seo" data-color="red">Seo</a></li>
+                            <li><a data-href="#seo">Seo</a></li>
+                            <li><a data-href="#seo">Seo</a></li>
+                            <li><a data-href="#seo">Seo</a></li>
+                            <li><a data-href="#seo">Seo</a></li>
+                            <li><a data-href="#seo">Seo</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-list-reviews--body">
+                        <div data-target="suite" class="active">
+                            <div class="lista-reviews">
+                                <?php 
+                                
+                                $recensioni = new RecensioniController;
+                                $recensioni->createRecensione();
+                                var_dump($recensioni->index());
+
+                                ?>
+                            </div>
+                        </div>
+                        <div data-target="seo">
+                            <div class="lista-reviews">
+                                test seo
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 <?php require __DIR__.'/../components/footer.php'; ?>
+use Inc\Controller\RecensioniController;

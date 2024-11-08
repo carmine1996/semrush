@@ -28,6 +28,11 @@ abstract class DBabstract{
     }
     public function create( array $params ){
 
+        foreach ($params as $key => $value) {
+            $colonne[] = $key;
+            $parametri[] = $value;
+        }
+
         $colonne = implode( ',', $this->colonne );
         $parametri = implode( "','", $params );
 

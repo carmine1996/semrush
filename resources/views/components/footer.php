@@ -1,5 +1,5 @@
 </main>
 
-    <script src="app.js"></script>
+    <script src="<?php echo ASSETS_PATH. 'app.js'; ?>"></script>
 </body>
 </html>

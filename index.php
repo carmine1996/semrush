@@ -1,5 +1,6 @@
 <?php
 
+use Inc\Model\User;
 use Inc\Controller\UserController;
 
 /* $token = bin2hex(openssl_random_pseudo_bytes(64));
@@ -17,6 +18,8 @@ var_dump($token); */
 spl_autoload_register(function( $class ){
     require_once( __DIR__ . DIRECTORY_SEPARATOR . $class . '.php' );
 });
+
+$user = new User;
 
 /* Qui gestisco tramite il GET in php le interfaccie da mostrare */
 

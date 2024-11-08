@@ -67,16 +67,20 @@ lista_opts_nazioni.forEach( function(opt){
 
 document.querySelectorAll('.tab-list-reviews').forEach(function( tablist ){
 
-    tablist.querySelector('.tab-list-reviews--head a').addEventListener('click', function(e){
+    tablist.querySelectorAll('.tab-list-reviews--head a').forEach(function( linktablist ){
+        linktablist.addEventListener('click', function(e){
 
-        document.querySelector(".tab-list-reviews--body [data-target]").classList.remove('active')
-
-        let target = this.getAttribute('data-href')
-
-        console.log(target);
-
-        let target_to_trigger = document.querySelector("[data-target="+target+"]")
-        
-        target_to_trigger.classList.add('active')
-    });
+            document.querySelectorAll(".tab-list-reviews--body [data-target]").forEach( (t) => t.classList.remove('active') )
+    
+            let target = this.getAttribute('data-href')
+            let colorBg = this.getAttribute('data-color')
+    
+            console.log(target);
+    
+            let target_to_trigger = document.querySelector("[data-target="+target+"]")
+            
+            target_to_trigger.style.background = colorBg
+            target_to_trigger.classList.add('active')
+        });
+    })
 });

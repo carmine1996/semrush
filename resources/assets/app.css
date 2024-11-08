@@ -688,3 +688,21 @@ img.hearth {
         transform:scale(1.2)
     }
 }
+
+.tab-list-reviews--body{
+    margin-top: 60px;
+    position: relative;
+}
+
+.tab-list-reviews--body > div{
+    position: absolute;
+    top: 0;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    background-color: pink;
+    width: 100%;
+}
+
+.tab-list-reviews--body > div:not(.active){
+    display: none;
+}
